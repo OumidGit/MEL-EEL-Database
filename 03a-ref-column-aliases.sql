@@ -28,7 +28,7 @@ USING (VALUES
     (N'V',              N'voltage_v',         N'MEL', 0.85),
     (N'kV',             N'voltage_v',         N'MEL', 0.85),
 
-    (N'PF',             N'power_fac tor_pf',   N'MEL', 0.95),
+    (N'PF',             N'power_factor_pf',   N'MEL', 0.95),
     (N'Power Factor',   N'power_factor_pf',   N'MEL', 0.95),
 
     (N'Starter',        N'starter_type',      N'MEL', 0.90),
@@ -151,3 +151,4 @@ SELECT TOP 50 * FROM ref.units_dictionary ORDER BY from_unit, to_unit;
 SELECT TOP 50 * FROM ref.demand_factors ORDER BY project_code, eq_type;
 SELECT TOP 50 * FROM ref.column_aliases ORDER BY source_scope, canonical_name, alias_name;
 */
+
