@@ -71,3 +71,25 @@ The following button is used to push the values written within the MEL into the 
 the following button is used to generate the load list based on the tables created in the database.
 
 **This button could be changed to create the load list into a new document instead of a worksheet within the MEL.**
+
+## Work to be done
+
+The following list presents various tasks left to do in order to complete this project. Please note that this list will be updated as needed.
+
+- Define a repository accessible throughout the company.
+
+- Define security and access constraints.
+
+- Create VBA Macro for Excel MEL to push data onto the Server.
+
+- Define automatic workflow in database to proceed throughout the various steps.
+
+- Define Project variable in order to define project-specific databases.
+
+- Define calculation steps for typical load list.
+
+- Define data validation and error correction.
+
+- Define method for manual modification of created load list (push manual changes from excel to the load list).
+
+- 
