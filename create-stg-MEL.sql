@@ -4,7 +4,7 @@ GO
 CREATE TABLE stg.MEL(
     -- Mechanical Section
     project_code           NVARCHAR(50) NOT NULL,
-    project_DB_ID          NVARCHAR(100) NULL,
+    project_DB_ID          NVARCHAR(100) NOT NULL,
     batch_id               UNIQUEIDENTIFIER NOT NULL,
     file_id                BIGINT NULL,
     eq_status              NVARCHAR(100) NULL,
@@ -54,4 +54,5 @@ CREATE TABLE stg.MEL(
     -- Misc 
     location               NVARCHAR(200) NULL,
     raw_row_json           NVARCHAR(MAX) NULL
+
 );
