@@ -4,7 +4,7 @@ GO
 CREATE TABLE stg.MEL(
     -- Mechanical Section
     project_code           NVARCHAR(50) NOT NULL,
-    project_DB_ID          NVARCHAR(100) NOT NULL,
+    project_DB_ID          NVARCHAR(100) NULL,
     batch_id               UNIQUEIDENTIFIER NOT NULL,
     file_id                BIGINT NULL,
     eq_status              NVARCHAR(100) NULL,
@@ -15,8 +15,8 @@ CREATE TABLE stg.MEL(
     eq_desc                NVARCHAR(400) NULL,
     rev                    NVARCHAR(400) NULL,
     qty                    NVARCHAR(400) NULL,
-    nameplate_power        NVARCHAR(100) NULL,
-    nameplate_power_unit   NVARCHAR(400) NULL,
+    nameplate_power_kw     NVARCHAR(100) NULL,
+    nameplate_power_hp     NVARCHAR(400) NULL,
     absorbed_power_kw      NVARCHAR(400) NULL,
     utilization_factor     NVARCHAR(100) NULL,
     starter_type           NVARCHAR(400) NULL,
@@ -54,5 +54,4 @@ CREATE TABLE stg.MEL(
     -- Misc 
     location               NVARCHAR(200) NULL,
     raw_row_json           NVARCHAR(MAX) NULL
-
 );

@@ -1,0 +1,62 @@
+USE MEL_EEL_Automation_Dev;
+GO
+
+IF OBJECT_ID('core.MEL','U') IS NULL
+BEGIN
+    CREATE TABLE core.MEL(
+        project_code           NVARCHAR(50) NOT NULL,
+        project_DB_ID          NVARCHAR(100) NOT NULL,
+        batch_id               UNIQUEIDENTIFIER NOT NULL,
+        file_id                BIGINT NULL,
+        eq_status              NVARCHAR(100) NULL,
+        Area                   NVARCHAR(100) NULL,
+        eq_type                NVARCHAR(100) NULL,
+        code                   NVARCHAR(100) NULL,
+        eq_tag                 NVARCHAR(100) NULL,
+        eq_desc                NVARCHAR(400) NULL,
+        rev                    NVARCHAR(400) NULL,
+        qty                    NVARCHAR(400) NULL,
+        nameplate_power_kw     NVARCHAR(100) NULL,
+        nameplate_power_hp     NVARCHAR(400) NULL,
+        absorbed_power_kw      NVARCHAR(400) NULL,
+        utilization_factor     NVARCHAR(100) NULL,
+        starter_type           NVARCHAR(400) NULL,
+        load_type              NVARCHAR(400) NULL,
+        duty                   NVARCHAR(400) NULL,
+        emergency_load         NVARCHAR(400) NULL,
+        poles                  NVARCHAR(400) NULL,
+
+        forced_duty            NVARCHAR(100) NULL,
+        duty_type              NVARCHAR(100) NULL,
+        demand_factor          NVARCHAR(100) NULL,
+        power_factor           NVARCHAR(100) NULL,
+        efficiency             NVARCHAR(100) NULL,
+        voltage_v              NVARCHAR(100) NULL,
+        phase                  NVARCHAR(100) NULL,
+        eroom                  NVARCHAR(100) NULL,
+        transformer            NVARCHAR(100) NULL,
+        mcc_switchgear         NVARCHAR(100) NULL,
+        forced_nameplate_power NVARCHAR(100) NULL,
+        bucket_size            NVARCHAR(100) NULL,
+        forced_starter_type    NVARCHAR(100) NULL,
+        installed_kw           NVARCHAR(100) NULL,
+        installed_kvar         NVARCHAR(100) NULL,
+        installed_kva          NVARCHAR(100) NULL,
+        peak_kw                NVARCHAR(100) NULL,
+        peak_kvar              NVARCHAR(100) NULL,
+        peak_kva               NVARCHAR(100) NULL,
+        average_kw             NVARCHAR(100) NULL,
+        average_kvar           NVARCHAR(100) NULL,
+        average_kva            NVARCHAR(100) NULL,
+        annual_load_mwh        NVARCHAR(100) NULL,
+        fla                    NVARCHAR(100) NULL,
+        current_draw           NVARCHAR(100) NULL,
+        fla_125pct             NVARCHAR(100) NULL,
+
+        location               NVARCHAR(200) NULL,
+        raw_row_json           NVARCHAR(MAX) NULL,
+
+        CONSTRAINT PK_core_MEL PRIMARY KEY (project_code, project_DB_ID)
+    );
+END
+GO
