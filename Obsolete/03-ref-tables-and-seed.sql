@@ -54,7 +54,7 @@ USING (VALUES
     (N'km', N'm',  1000.0, 0.0),
 
     (N'mm2',N'mm2',1.0, 0.0),   -- cross-section area
-    (N'AWG',N'AWG',1.0, 0.0)    -- if you later add a mapping table AWG<->mm², keep this placeholder
+    (N'AWG',N'AWG',1.0, 0.0)    -- if you later add a mapping table AWG<->mmÂ², keep this placeholder
 ) AS src(from_unit,to_unit,factor,offset)
 ON (tgt.from_unit = src.from_unit AND tgt.to_unit = src.to_unit)
 WHEN NOT MATCHED THEN
