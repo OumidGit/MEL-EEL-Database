@@ -24,14 +24,17 @@ GO
 
 --Define access here:
 MERGE ref.access AS tgt
-USING (VALUES
+USING (SELECT DISTINCT employee_id, project_id
+    FROM (VALUES
     (N'1', N'9334'),
     (N'1', N'9353'),
     (N'2', N'9753'),
-    (N'2', N'9754')
-) AS src(employee_id, project_id)
-ON (tgt.employee_id = src.employee_id)
-WHEN MATCHED THEN
-  UPDATE SET project_id=src.project_id
+    (N'2', N'9754'),
+    (N'1', N'9753')
+    )AS v(employee_id, project_id)
+) AS src
+ON tgt.employee_id = src.employee_id
+AND tgt.project_id = src.project_id
 WHEN NOT MATCHED THEN
-  INSERT(employee_id,project_id) VALUES(src.employee_id,src.project_id);
+    INSERT (employee_id, project_id)
+    VALUES (src.employee_id, src.project_id);
