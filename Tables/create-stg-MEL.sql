@@ -51,6 +51,7 @@ CREATE TABLE stg.MEL(
     fla                    NVARCHAR(100) NULL,
     current_draw           NVARCHAR(100) NULL,
     fla_125pct             NVARCHAR(100) NULL,
+    remarks                NVARCHAR(100) NULL,
     -- Misc 
     location               NVARCHAR(200) NULL,
     raw_row_json           NVARCHAR(MAX) NULL
