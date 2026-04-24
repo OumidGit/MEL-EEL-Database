@@ -35,7 +35,7 @@ BEGIN
             forced_duty, duty_type, demand_factor, power_factor, efficiency, voltage_v,
             phase, eroom, transformer, mcc_switchgear, forced_nameplate_power,
             bucket_size, forced_starter_type, installed_kw, installed_kvar, installed_kva,
-            peak_kw, peak_kvar, peak_kva, average_kw, average_kva, average_kva,
+            peak_kw, peak_kvar, peak_kva, average_kw, average_kvar, average_kva,
             annual_load_mwh, fla, current_draw, fla_125pct, remarks, location, raw_row_json
         FROM audit.MEL_daily_snapshot
         WHERE snapshot_date = @snapshot_date;
